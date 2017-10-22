@@ -1,0 +1,41 @@
+review:
+  checklist:
+    - Just one checkbox
+    - And another
+  # Some monitoring graphs.
+  # monitoring:
+    # Either as images.
+  #  - image: "https://example.com/monitoring"
+  #    width: 360
+  #    height: 180
+    # Or iframes.
+  #  - iframe: "https://example.com/monitoring"
+  #    width: 360
+  #    height: 180
+
+deploy:
+  #pre:
+  #  - script/decrypt-secrets
+
+  # If Shipit can't infer how to deploy your app you'll have to override the default commands.
+  override:
+    - ./shipit/test.sh
+
+  # If you want things to happen after your deploy is successful you can specify them in the `post` step.
+  #post:
+  #  - script/notify-deploy-complete
+
+# If your deploys have a fast rollback procedure you can define it here.
+# This will make rollback buttons appear in the interface.
+#rollback:
+#  override:
+#    - script/rollback
+
+# Sometime you might want to trigger custom scripts on Shipit, this section allows you to define
+# arbitrary tasks that you can trigger from the interface.
+#tasks:
+#  flush_cache:
+#    action: "Flush cache"
+#    description: "Flushes the application memcache cluster"
+#    steps:
+#      - script/flush-cache
