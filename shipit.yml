@@ -33,9 +33,15 @@ deploy:
 
 # Sometime you might want to trigger custom scripts on Shipit, this section allows you to define
 # arbitrary tasks that you can trigger from the interface.
-#tasks:
-#  flush_cache:
-#    action: "Flush cache"
-#    description: "Flushes the application memcache cluster"
-#    steps:
-#      - script/flush-cache
+tasks:
+  flush_cache:
+    action: "Flush cache"
+    description: "Flushes the application memcache cluster"
+    steps:
+      - ./shipit/flush-cache
+  db_migrate:
+    action: "Migrate database"
+    description: "Migrated databases"
+    steps:
+      - ./shipit/db_migrate
+
