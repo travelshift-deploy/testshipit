@@ -38,10 +38,10 @@ tasks:
     action: "Flush cache"
     description: "Flushes the application memcache cluster"
     steps:
-      - ./shipit/flush-cache
+      - ./shipit/clean_cache.sh
   db_migrate:
     action: "Migrate database"
     description: "Migrated databases"
     steps:
-      - ./shipit/db_migrate
+      - ./shipit/db_migrate.sh
 
