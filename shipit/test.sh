@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Testing deploy scripts invocation"
 pwd
-git log
+git --no-pager log
 echo "============"
-git log --merges --reverse
+git --no-pager log --merges --reverse
