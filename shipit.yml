@@ -24,6 +24,9 @@ deploy:
   # If you want things to happen after your deploy is successful you can specify them in the `post` step.
   #post:
   #  - script/notify-deploy-complete
+rollback:
+  override:
+    - ./shipit/undeploy.sh
 
 # If your deploys have a fast rollback procedure you can define it here.
 # This will make rollback buttons appear in the interface.
