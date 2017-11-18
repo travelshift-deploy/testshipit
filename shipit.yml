@@ -19,7 +19,7 @@ deploy:
 
   # If Shipit can't infer how to deploy your app you'll have to override the default commands.
   override:
-    - ./shipit/test.sh
+    - ./shipit/deploy.sh
 
   # If you want things to happen after your deploy is successful you can specify them in the `post` step.
   #post:
@@ -28,14 +28,6 @@ rollback:
   override:
     - ./shipit/undeploy.sh
 
-# If your deploys have a fast rollback procedure you can define it here.
-# This will make rollback buttons appear in the interface.
-#rollback:
-#  override:
-#    - script/rollback
-
-# Sometime you might want to trigger custom scripts on Shipit, this section allows you to define
-# arbitrary tasks that you can trigger from the interface.
 tasks:
   flush_cache:
     action: "Flush cache"
@@ -47,4 +39,9 @@ tasks:
     description: "Migrated databases"
     steps:
       - ./shipit/db_migrate.sh
+  client_rebuild:
+    action: "Rebuild webclient"
+    description: "Invoke fab deply from deploybox"
+    steps:
+      - ./shipit/webclient_rebuild.sh
 
