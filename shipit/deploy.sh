@@ -5,7 +5,7 @@ WEBCLIENT=0
 CACHEWIPE=0
 DEPLOYUSER=shipit
 DEPLOYHOST=deploybox
-COMMAND="/usr/local/lib/toolbox/deployment/git-update-servers-v2.sh"
+COMMAND="/usr/local/lib/toolbox/deployment/git-update-servers-v2.sh -u $REVISION"
 echo "$STAMP: Testing deploy scripts invocation"
 echo "-----------------------------------------"
 echo "LASTDEP=$LAST_DEPLOYED_SHA"
