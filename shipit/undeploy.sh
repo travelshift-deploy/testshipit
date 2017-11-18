@@ -23,13 +23,13 @@ echo -n " - db migrations ... "
 #	        break
 #	fi
 #done
-if [ "$DBMIGRATE" == "1" ]
-then
-	echo "will need to migrate"
-	COMMAND="$COMMAND -d"
-else
-	echo "not needed"
-fi
+#if [ "$DBMIGRATE" == "1" ]
+#then
+#	echo "will need to migrate"
+#	COMMAND="$COMMAND -d"
+#else
+#	echo "not needed"
+#fi
 
 
 echo -n " - cache wipeout ... "
@@ -70,3 +70,4 @@ else
         echo "not needed"
 fi
 
+echo "Final command = ssh $DEPLOYUSER@$DEPLOYHOST \"$COMMAND\""
