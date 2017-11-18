@@ -30,7 +30,7 @@ echo -n " - db migrations ... "
 #else
 #	echo "not needed"
 #fi
-
+echo "not checked. BE SURE DB SCHEMA IS BACKWARDS COMPATIBLE!"
 
 echo -n " - cache wipeout ... "
 for commit in $commits
