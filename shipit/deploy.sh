@@ -26,7 +26,7 @@ done
 if [ "$DBMIGRATE" == "1" ]
 then
 	echo "will need to migrate"
-	$COMMAND="$COMMAND -d"
+	COMMAND="$COMMAND -d"
 else
 	echo "not needed"
 fi
@@ -70,5 +70,5 @@ else
         echo "not needed"
 fi
 
-echo "Final command = ssh $DEPLOYUSER@$DEPLOYBOX \"$COMMAND\""
+echo "Final command = ssh $DEPLOYUSER@$DEPLOYHOST \"$COMMAND\""
 
